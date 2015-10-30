@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <lang="en">
+    <meta charset="UTF-8">
+    <title>Laryssa's Calculator</title>
+
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <script type="text/javascript" src="/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+
+</head>
+<body>
+        <h1>Basic Calculator</h1>
+        <form id = "inputForm">
+            <label for="xInput">Enter #: </label>
+            <input type="text" id="xInput" name="xInput" placeholder="Enter number here">
+
+            <label for="mathOperation">Choose: Add, Subtract, Multiply, Divide </label>
+            <input type="text" id="mathOperation" name="mathOperation" placeholder="Enter math operation">
+
+            <label for="yInput">Enter #: </label>
+            <input type="text" id="yInput" name="yInput" placeholder="Enter number here">
+        </form>
+
+        <div id="mathButtons">
+        <button id="add" class="btn btn-info">+</button>
+        <button id="subtract" class="btn btn-info">-</button>
+        <button id="multiply" class="btn btn-info">x</button>
+        <button id="divide" class="btn btn-info">%</button>
+        </div>
+
+        <button id="getData" class="btn btn-info">Do the math!</button>
+
+        <div class = "container">
+            <h3>Answer: </h3>
+        </div>
+
+
+</body>
+</html>
