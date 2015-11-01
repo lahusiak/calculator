@@ -4,7 +4,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var add = require('./add');
+var result = require('./modules/calculate');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
