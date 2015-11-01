@@ -1,8 +1,15 @@
 var equationElements = {};
 
 $(document).ready(function(){
+    $("#inputForm").submit(function(event){
+        event.preventDefault()
+    });
+
+    $(".math-button").on('click', addObjectMathOperation);
+
     $("#getData").on('click', doMath);
     $("#clear").on('click', clear);
+
 
 });
 
@@ -29,7 +36,6 @@ function ajaxCall(){
         success: function(data){
             console.log("this is data back from server:", data);
             appendResults(data);
-            //$(".container").children().last().append("<p>" + data.answer + "</p>");
         }
     })
 
@@ -41,5 +47,15 @@ function appendResults(data){
 
 function clear(){
     $(".answer").empty();
-    //equationElements = {};
+    equationElements = {};
 }
+
+function addObjectMathOperation(){
+    console.log("I'm clicked");
+    $(".math-button").on('click', function(){
+        var mathOperation = event.target.id;
+        equationElements.mathOperation = mathOperation;
+    })
+}
+
+
