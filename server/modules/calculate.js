@@ -14,11 +14,10 @@ var calculate = function(object) {
             result = parseInt(object.xInput) * parseInt(object.yInput);
             break;
         case "divide":
-        //how do I make a catch-all default?
-        default:
             result = parseInt(object.xInput) / parseInt(object.yInput);
             break;
-
+        default:
+            result = "Try again";
     }
     return result;
 };

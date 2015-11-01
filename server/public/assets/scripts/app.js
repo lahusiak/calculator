@@ -5,13 +5,18 @@ $(document).ready(function(){
         event.preventDefault()
     });
 
-    $(".math-button").on('click', addObjectMathOperation);
-
-    $("#getData").on('click', doMath);
-    $("#clear").on('click', clear);
+    enable();
 
 
 });
+
+function enable(){
+    $("#clear").hide();
+    addObjectMathOperation();
+    $(".math-button").on('click', addObjectMathOperation);
+    $("#getData").on('click', doMath);
+    $("#clear").on('click', clear);
+}
 
 function doMath() {
 
@@ -22,6 +27,7 @@ function doMath() {
     $("#inputForm").find("input[type=text]").val("");
 
     ajaxCall();
+    $("#clear").show();
 }
 
 
@@ -48,6 +54,7 @@ function appendResults(data){
 function clear(){
     $(".answer").empty();
     equationElements = {};
+    $(".math-button").removeClass('active');
 }
 
 function addObjectMathOperation(){

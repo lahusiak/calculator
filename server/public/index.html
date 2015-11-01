@@ -12,16 +12,17 @@
 
 </head>
 <body>
-        <h1>Basic Calculator</h1>
+<div id ='calculatorBox'>
+<h1>Basic Calculator</h1>
         <form id = "inputForm">
             <label for="xInput">Enter #: </label>
             <input type="text" id="xInput" name="xInput" placeholder="Enter number here">
 
             <div id="mathButtons">
-                <button id="add" class="btn math-button">+</button>
-                <button id="subtract" class="btn math-button">-</button>
-                <button id="multiply" class="btn math-button">x</button>
-                <button id="divide" class="btn math-button">%</button>
+                <button id="add" class="btn-info math-button">+</button>
+                <button id="subtract" class="btn-info math-button">-</button>
+                <button id="multiply" class="btn-info math-button">x</button>
+                <button id="divide" class="btn-info math-button">/</button>
             </div>
 
             <!--<label for="mathOperation">Choose: Add, Subtract, Multiply, Divide </label>
@@ -29,18 +30,16 @@
 
             <label for="yInput">Enter #: </label>
             <input type="text" id="yInput" name="yInput" placeholder="Enter number here">
+            <br>
+            <br>
+            <button id="getData" class="btn btn-info">=</button>
+            <br>
+            <br>
+            <div class = "container">
+                <h3>Answer: </h3>
+            </div>
+            <button id="clear" class="btn btn-info">Clear</button>
         </form>
-
-
-
-        <button id="getData" class="btn btn-info">Do the math!</button>
-
-        <button id="clear" class="btn btn-info">Clear</button>
-
-        <div class = "container">
-            <h3>Answer: </h3>
-        </div>
-
-
+</div>
 </body>
 </html>
