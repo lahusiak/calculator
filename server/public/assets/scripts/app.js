@@ -2,6 +2,7 @@ var equationElements = {};
 
 $(document).ready(function(){
     $("#getData").on('click', doMath);
+    $("#clear").on('click', clear);
 
 });
 
@@ -27,13 +28,18 @@ function ajaxCall(){
             },
         success: function(data){
             console.log("this is data back from server:", data);
-            //appendResults(data);
-            $(".container").children().last().append("<p>" + data.answer + "</p>");
+            appendResults(data);
+            //$(".container").children().last().append("<p>" + data.answer + "</p>");
         }
     })
 
 }
 
 function appendResults(data){
-   $(".container").children().last().append("<p>" + data.answer + "/<p>");
+   $(".container").children().last().append("<div class = 'answer'>" + data.answer + "</div>");
+}
+
+function clear(){
+    $(".answer").empty();
+    //equationElements = {};
 }
