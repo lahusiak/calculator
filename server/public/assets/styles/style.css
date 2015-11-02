@@ -3,9 +3,18 @@
     height: 500px;
     border: 2px solid black;
     text-align: center;
-
+    background-color: darkslateblue;
+    margin: auto;
+    padding: 15px;
 }
 
+#calculatorBox h1, label, h3{
+    color: white;
+}
+
+img {
+    opacity:0.5;
+}
 .container{
     width: 200px;
     height: 75px;
