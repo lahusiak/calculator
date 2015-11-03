@@ -48,15 +48,16 @@ function ajaxCall(){
 }
 
 function appendResults(data){
-   $(".container").children().last().append("<div class = 'answer'>" + data.answer + "</div>");
+   $(".container").children().last().text(data.answer);
 }
 
+//clears answer and resets array to empty.
 function clear(){
-    $(".answer").empty();
+    $(".container").children().last().empty();
     equationElements = {};
-    $(".math-button").removeClass('active');
 }
 
+//assigns mathOperation key to objects in equationElements array.
 function addObjectMathOperation(){
     console.log("I'm clicked");
     $(".math-button").on('click', function(){
